@@ -10,6 +10,17 @@ const model = ref([
         label: '',
         items: [
             {
+                label: 'REGISTER', to: '', permissions: [''],
+                items: [
+                    {
+                        label: 'REGISTER', icon: '', to: '',
+                        items: [
+                            { label: 'Dashboard', icon: '', to: '/register-machine/dashboard' },
+                        ]
+                    },
+                ]
+            },
+            {
                 label: 'ESI MONACO', to: '', permissions: [''],
                 items: [
                     {

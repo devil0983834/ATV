@@ -858,11 +858,13 @@ async function onRequestDoubleClicked(item) {
         <BaseTable title="Request Information" :columns=requestTableColumns :rowData=listRequest
             @row-dblclick="onRequestDoubleClicked" />
     </div>
+    
     <div class="card">
         <!-- Data Table Section -->
         <BaseTable title="Hold Lot Information" :columns=lotTableColumns v-model:rowData=lotDataTable
             :selection=authStore.HasPermission(gVariable.permission.hlmApproved.TE)
             @selection-change="handleSelectionChange" @request-clicked="handleRequestClicked" />
+
         <!-- Charts Section -->
         <div class="charts-section">
             <BaseChart title="Monaco hold lot status" type="bar" :data="statusChartData" :options="chartOptions" />
